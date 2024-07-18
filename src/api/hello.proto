@@ -1,0 +1,16 @@
+option go_package = "../pkg/grpc";
+
+// protoファイルで定義した service
+service GreetingService {
+	// サービスが持つメソッドの定義
+	rpc Hello (HelloRequest) returns (HelloResponse);
+}
+
+// protoファイルで定義したメッセージ型
+message HelloRequest {
+	required string name = 1;
+}
+
+message HelloResponse {
+	required string message = 1;
+}
