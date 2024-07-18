@@ -4,9 +4,9 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.dev
-    # command: go run main.go
-    # ports:
-    #   - 1323:1323
+    command: go run cmd/server/main.go
+    ports:
+      - 8080:8080
     tty: true
     # links:
     #   - db

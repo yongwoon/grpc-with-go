@@ -49,6 +49,16 @@ protoc --go_out=../pkg/grpc --go_opt=paths=source_relative \
 	hello.proto
 ```
 
+## Utils
+
+- install grpcurl
+
+```bash
+brew install grpcurl
+
+which grpcurl
+```
+
 ## Link
 
 - [Language Guide (proto 3)](https://protobuf.dev/programming-guides/proto3/)
