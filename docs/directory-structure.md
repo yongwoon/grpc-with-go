@@ -1,23 +1,30 @@
 # Project Structure
 
+```txt
 ./src
+
 ├─ api
-│ └─ hello.proto # proto ファイル
+│   └─ hello.proto # protoファイル
 ├─ cmd
-│ └─ server
-│ └─ main.go
+│   ├─ server
+│   │   └─ main.go
+│   └─ client
+│       └─ main.go
 ├─ pkg
-│ └─ grpc # 自動生成されたコード
-│ ├─ hello.pb.go
-│ └─ hello_grpc.pb.go
+│   └─ grpc # 自動生成されたコード
+│       ├─ hello.pb.go
+│       └─ hello_grpc.pb.go
 ├─ go.mod
 └─ go.sum
+```
 
 ## 説明
 
 - `src/api`
   - proto file が置かれる
 - `src/cmd/server`
+  - gRPC server file が置かれる
+- `src/cmd/client`
   - gRPC server file が置かれる
 - `src/pkg/grpc`
   - `protoc` command で自動生成された file が置かれる
